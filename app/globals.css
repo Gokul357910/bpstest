@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f7f6;
+}
+
+.tick-rule {
+  position: relative;
+  height: 2px;
+}
+.tick-rule::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #d9dfdc 0 1px,
+    transparent 1px 14px
+  );
+}
+
+.card-hover {
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -18px rgba(14, 42, 71, 0.35);
+  border-color: #2f9e6e;
+}
+
+.needle {
+  transform-origin: 210px 210px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .needle {
+    animation: none !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
