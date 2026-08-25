@@ -19,13 +19,13 @@ export default function Hero() {
 
           <h1 className="font-display text-[38px] leading-[1.08] sm:text-[46px] md:text-[56px] font-semibold tracking-[-0.01em] text-navy">
             The best Physiotherapy course in{" "}
-            <span className="italic text-amber">Palakkad</span> starts with
+            <span className="italic text-emerald-800">Palakkad</span> starts with
             how you&apos;re measured.
           </h1>
 
           <p className="mt-6 text-[16.5px] md:text-[18px] text-navy/65 max-w-xl leading-relaxed">
             P.K. Das College of Physiotherapy, Vaniyamkulam, offers a
-            KUHS-affiliated programme built on real clinical exposure — from
+            KUHS affiliated programme built on real clinical exposure from
             musculoskeletal care to sports injury and neuro-rehabilitation.
           </p>
 
@@ -35,7 +35,7 @@ export default function Hero() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSeNZi8r2gbHvLu9wPG5GALbA4HN3PeTT5cK1WyEh1pHMDBeFw/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-amber hover:bg-amber-dark text-white transition rounded-full px-7 py-3.5 font-semibold text-[15px] shadow-[0_14px_30px_-10px_rgba(232,150,60,.5)]"
+              className="bg-blue-600 hover:bg-blue-700 text-white transition rounded-full px-7 py-3.5 font-semibold text-[15px] shadow-[0_14px_30px_-10px_rgba(37,99,235,.5)]"
             >
               Apply Now
             </a>

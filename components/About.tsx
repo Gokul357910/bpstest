@@ -13,7 +13,7 @@ export default function About() {
             <br className="hidden md:block" /> of Physiotherapy
           </h2>
           <p className="mt-5 text-navy/70 leading-relaxed">
-            Best Physiotherapy course in Palakkad — offering one of the
+            Best Physiotherapy course in Palakkad offering one of the
             leading physiotherapy education programmes in Ottapalam,
             Vaniyamkulam, with comprehensive knowledge and hands-on training
             across musculoskeletal disorders, sports injuries, neurological
@@ -44,13 +44,13 @@ export default function About() {
             Teaching and training are delivered through lectures, small-group
             tutorials, presentations, practical sessions, laboratory-based
             learning, peer-group learning, clinical training and independent
-            study — guided throughout by experienced medical and
+            study guided throughout by experienced medical and
             physiotherapy professionals.
           </p>
           <p>
             The focus extends beyond theory to practical skill, clinical
             reasoning, communication, professional ethics and compassionate
-            patient care — preparing students to meet the evolving demands of
+            patient care preparing students to meet the evolving demands of
             the physiotherapy profession.
           </p>
         </Reveal>

@@ -15,7 +15,7 @@ export default function MissionVision() {
               </span>
               <p className="font-display text-[21px] md:text-[24px] leading-snug mt-4 text-white/95">
                 To educate and empower future physiotherapists with
-                comprehensive clinical and professional skills — enabling
+                comprehensive clinical and professional skills enabling
                 them to excel in leadership and research, contribute to
                 communities, promote health, prevent disability, improve
                 physical function and encourage active, healthy movement.

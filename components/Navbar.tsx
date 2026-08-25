@@ -1,80 +1,342 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { contact } from "@/lib/content";
 
+const APPLY_FORM =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeNZi8r2gbHvLu9wPG5GALbA4HN3PeTT5cK1WyEh1pHMDBeFw/viewform";
+
 export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+  };
+
   return (
     <>
-      {/* Utility bar */}
-      <div className="bg-navy text-white/80 text-[13px]">
-        <div className="max-w-7xl mx-auto px-5 md:px-8 py-2 flex items-center justify-between">
+      {/* =========================================================
+          TOP UTILITY BAR
+      ========================================================= */}
+      <div className="bg-navy text-white/80 text-[12px]">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-2.5 flex items-center justify-between gap-4">
+          {/* Contact information */}
           <div className="flex items-center gap-5">
             <a
               href={contact.admissionHotlineHref}
-              className="flex items-center gap-1.5 hover:text-amber transition"
+              className="flex items-center gap-2 hover:text-amber transition-colors duration-300"
             >
               <PhoneIcon />
-              <span className="hidden sm:inline">{contact.admissionHotline}</span>
+              <span className="hidden sm:inline">
+                {contact.admissionHotline}
+              </span>
             </a>
+
             <a
               href={`mailto:${contact.email}`}
-              className="hidden sm:flex items-center gap-1.5 hover:text-amber transition"
+              className="hidden md:flex items-center gap-2 hover:text-amber transition-colors duration-300"
             >
               <MailIcon />
-              {contact.email}
+              <span>{contact.email}</span>
             </a>
           </div>
-          <div className="text-amber font-medium tracking-wide text-[11px] sm:text-[12px]">
-            ADMISSION ENQUIRY 2024–25 · {contact.enquiryNumbers.join(" / ")}
+
+          {/* Admission information */}
+          <div className="text-amber font-medium tracking-wide text-[10px] sm:text-[11px] uppercase whitespace-nowrap">
+            ADMISSION ENQUIRY 2026–27 ·{" "}
+            {contact.enquiryNumbers.join(" / ")}
           </div>
         </div>
       </div>
 
-      {/* Nav */}
-      <header
-        id="top"
-        className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-mist"
-      >
-        <div className="max-w-7xl mx-auto px-5 md:px-8 h-[76px] flex items-center justify-between">
-          <Link href="#top" className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt="P.K. Das Institute of Medical Sciences"
-              width={44}
-              height={44}
-              className="h-11 w-11 object-contain"
-            />
-            <div className="leading-tight">
-              <div className="font-display font-semibold text-[17px] text-navy">
-                P.K. Das College
+      {/* =========================================================
+          MAIN HEADER
+      ========================================================= */}
+      <header className="sticky top-0 z-50 pt-3 pb-3 bg-white/80 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-8">
+          <div
+            className="
+              relative
+              h-[76px]
+              md:h-[82px]
+              px-5
+              md:px-7
+              rounded-[42px]
+              bg-white/95
+              backdrop-blur-xl
+              border
+              border-white/70
+              shadow-[0_18px_45px_rgba(16,35,75,0.10)]
+              flex
+              items-center
+              justify-between
+              transition-all
+              duration-300
+              hover:shadow-[0_22px_55px_rgba(16,35,75,0.14)]
+            "
+          >
+            {/* =====================================================
+                LOGO
+            ===================================================== */}
+            <Link
+              href="#top"
+              onClick={closeMobileMenu}
+              className="group flex items-center gap-3 shrink-0"
+            >
+              <div className="relative flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="P.K. Das Institute of Medical Sciences"
+                  width={54}
+                  height={54}
+                  className="
+                    h-[48px]
+                    w-[48px]
+                    md:h-[54px]
+                    md:w-[54px]
+                    object-contain
+                    transition-transform
+                    duration-300
+                    group-hover:scale-[1.04]
+                  "
+                  priority
+                />
               </div>
-              <div className="font-mono text-[10px] tracking-[0.18em] text-green uppercase">
-                of Physiotherapy
+
+              <div className="leading-tight">
+                <div className="font-display font-semibold text-[16px] md:text-[18px] text-navy tracking-[-0.01em]">
+                  P.K. Das College
+                </div>
+
+                <div className="font-mono text-[9px] md:text-[10px] tracking-[0.18em] text-green uppercase mt-0.5">
+                  of Physiotherapy
+                </div>
               </div>
+            </Link>
+
+            {/* =====================================================
+                DESKTOP NAVIGATION
+            ===================================================== */}
+            <nav className="hidden lg:flex items-center ml-auto mr-7 gap-7 xl:gap-9">
+              <NavLink href="#about">About</NavLink>
+
+              <NavLink href="#mission">
+                Mission &amp; Vision
+              </NavLink>
+
+              <NavLink href="#departments">
+                Departments
+              </NavLink>
+
+              <NavLink href="#admissions">
+                Admissions
+              </NavLink>
+
+              <NavLink href="#contact">
+                Contact
+              </NavLink>
+            </nav>
+
+            {/* =====================================================
+                DESKTOP ACTION BUTTONS
+            ===================================================== */}
+            <div className="hidden lg:flex items-center gap-3 shrink-0">
+              <a
+                href={APPLY_FORM}
+                className="
+                  group
+                  inline-flex
+                  items-center
+                  justify-center
+                  h-[48px]
+                  px-5
+                  xl:px-6
+                  rounded-full
+                  border
+                  border-navy/20
+                  bg-white
+                  text-navy
+                  font-semibold
+                  text-[13px]
+                  xl:text-[14px]
+                  transition-all
+                  duration-300
+                  hover:border-green
+                  hover:text-green
+                  hover:-translate-y-0.5
+                "
+              >
+                Enquire Now
+              </a>
+
+              <a
+                href={APPLY_FORM}
+                className="
+                    inline-flex
+                    items-center
+                    justify-center
+                    h-[48px]
+                    px-5
+                    xl:px-6
+                    rounded-full
+                    bg-blue-600
+                    text-white
+                    font-semibold
+                    text-[13px]
+                    xl:text-[14px]
+                    shadow-[0_12px_28px_-10px_rgba(37,99,235,0.65)]
+                    transition-all
+                    duration-300
+                    hover:bg-blue-700
+                    hover:-translate-y-1
+                    hover:shadow-[0_17px_35px_-10px_rgba(37,99,235,0.75)]
+                  "
+              >
+                Apply Now
+              </a>
             </div>
-          </Link>
 
-          <nav className="hidden lg:flex items-center gap-9 font-medium text-[14.5px] text-navy/80">
-            <a href="#about" className="hover:text-green transition">About</a>
-            <a href="#mission" className="hover:text-green transition">Mission &amp; Vision</a>
-            <a href="#departments" className="hover:text-green transition">Departments</a>
-            <a href="#admissions" className="hover:text-green transition">Admissions</a>
-            <a href="#contact" className="hover:text-green transition">Contact</a>
-          </nav>
+            {/* =====================================================
+                MOBILE MENU BUTTON
+            ===================================================== */}
+            <button
+              type="button"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen((value) => !value)}
+              className="
+                lg:hidden
+                w-[48px]
+                h-[48px]
+                rounded-full
+                bg-green
+                text-white
+                flex
+                items-center
+                justify-center
+                shrink-0
+                transition-all
+                duration-300
+                hover:bg-green/90
+                hover:scale-105
+                focus:outline-none
+                focus:ring-2
+                focus:ring-green/30
+              "
+            >
+              {mobileOpen ? <CloseIcon /> : <MenuIcon />}
+            </button>
 
-          <div className="flex items-center gap-3">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeNZi8r2gbHvLu9wPG5GALbA4HN3PeTT5cK1WyEh1pHMDBeFw/viewform"
-              className="hidden sm:inline-block text-navy font-semibold text-[14px] border border-navy/20 rounded-full px-5 py-2.5 hover:border-green hover:text-green transition"
-            >
-              Enquire Now
-            </a>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeNZi8r2gbHvLu9wPG5GALbA4HN3PeTT5cK1WyEh1pHMDBeFw/viewform"
-              className="inline-block bg-amber text-white font-semibold text-[14px] rounded-full px-5 py-2.5 hover:bg-amber-dark transition shadow-[0_10px_24px_-10px_rgba(232,150,60,.7)]"
-            >
-              Apply Now
-            </a>
+            {/* =====================================================
+                MOBILE MENU
+            ===================================================== */}
+            {mobileOpen && (
+              <div
+                className="
+                  absolute
+                  left-0
+                  right-0
+                  top-[calc(100%+10px)]
+                  rounded-[28px]
+                  bg-white
+                  border
+                  border-navy/5
+                  shadow-[0_25px_60px_rgba(16,35,75,0.16)]
+                  overflow-hidden
+                  lg:hidden
+                  animate-fadeDown
+                "
+              >
+                <div className="p-5">
+                  {/* Mobile navigation */}
+                  <nav className="flex flex-col gap-1">
+                    <MobileNavLink
+                      href="#about"
+                      onClick={closeMobileMenu}
+                    >
+                      About
+                    </MobileNavLink>
+
+                    <MobileNavLink
+                      href="#mission"
+                      onClick={closeMobileMenu}
+                    >
+                      Mission &amp; Vision
+                    </MobileNavLink>
+
+                    <MobileNavLink
+                      href="#departments"
+                      onClick={closeMobileMenu}
+                    >
+                      Departments
+                    </MobileNavLink>
+
+                    <MobileNavLink
+                      href="#admissions"
+                      onClick={closeMobileMenu}
+                    >
+                      Admissions
+                    </MobileNavLink>
+
+                    <MobileNavLink
+                      href="#contact"
+                      onClick={closeMobileMenu}
+                    >
+                      Contact
+                    </MobileNavLink>
+                  </nav>
+
+                  {/* Mobile CTA buttons */}
+                  <div className="mt-5 pt-5 border-t border-navy/10 grid grid-cols-2 gap-3">
+                    <a
+                      href={APPLY_FORM}
+                      onClick={closeMobileMenu}
+                      className="
+                        h-[50px]
+                        rounded-full
+                        border
+                        border-navy/20
+                        flex
+                        items-center
+                        justify-center
+                        text-navy
+                        font-semibold
+                        text-[14px]
+                        transition-all
+                        duration-300
+                        hover:border-green
+                        hover:text-green
+                      "
+                    >
+                      Enquire Now
+                    </a>
+
+                    <a
+                      href={APPLY_FORM}
+                      onClick={closeMobileMenu}
+                      className="
+                          h-[50px]
+                          rounded-full
+                          bg-blue-600
+                          text-white
+                          flex
+                          items-center
+                          justify-center
+                          font-semibold
+                          text-[14px]
+                          shadow-[0_10px_25px_-10px_rgba(37,99,235,0.7)]
+                          transition-all
+                          duration-300
+                          hover:bg-blue-700
+                        "
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </header>
@@ -82,9 +344,147 @@ export default function Navbar() {
   );
 }
 
+/* ================================================================
+   DESKTOP NAV LINK
+================================================================ */
+
+function NavLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      className="
+        group
+        relative
+        py-3
+        text-[14px]
+        xl:text-[14.5px]
+        font-semibold
+        text-navy/80
+        transition-colors
+        duration-300
+        hover:text-green
+        whitespace-nowrap
+      "
+    >
+      {children}
+
+      {/* Underline */}
+      <span
+        className="
+          absolute
+          left-1/2
+          bottom-1
+          h-[2px]
+          w-0
+          rounded-full
+          bg-green
+          -translate-x-1/2
+          transition-all
+          duration-300
+          group-hover:w-full
+        "
+      />
+
+      {/* Small hover dot */}
+      <span
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          w-2
+          h-2
+          rounded-full
+          bg-green
+          opacity-0
+          scale-0
+          -translate-x-1/2
+          -translate-y-1/2
+          transition-all
+          duration-300
+          group-hover:opacity-[0.06]
+          group-hover:scale-[8]
+          pointer-events-none
+        "
+      />
+    </a>
+  );
+}
+
+/* ================================================================
+   MOBILE NAV LINK
+================================================================ */
+
+function MobileNavLink({
+  href,
+  onClick,
+  children,
+}: {
+  href: string;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      onClick={onClick}
+      className="
+        group
+        flex
+        items-center
+        justify-between
+        min-h-[52px]
+        px-4
+        rounded-2xl
+        text-[15px]
+        font-semibold
+        text-navy
+        transition-all
+        duration-300
+        hover:bg-[#F4FFF8]
+        hover:text-green
+        hover:translate-x-1
+      "
+    >
+      <span>{children}</span>
+
+      <span
+        className="
+          text-green
+          opacity-0
+          -translate-x-2
+          transition-all
+          duration-300
+          group-hover:opacity-100
+          group-hover:translate-x-0
+        "
+      >
+        <ArrowIcon />
+      </span>
+    </a>
+  );
+}
+
+/* ================================================================
+   ICONS
+================================================================ */
+
 function PhoneIcon() {
   return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      aria-hidden="true"
+    >
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
     </svg>
   );
@@ -92,9 +492,74 @@ function PhoneIcon() {
 
 function MailIcon() {
   return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      aria-hidden="true"
+    >
       <path d="m22 6-10 7L2 6" />
       <rect x="2" y="4" width="20" height="16" rx="2" />
     </svg>
   );
 }
+
+function MenuIcon() {
+  return (
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <line x1="4" y1="7" x2="20" y2="7" />
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <line x1="4" y1="17" x2="20" y2="17" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <line x1="6" y1="6" x2="18" y2="18" />
+      <line x1="18" y1="6" x2="6" y2="18" />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
+
