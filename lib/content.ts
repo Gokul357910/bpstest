@@ -114,3 +114,41 @@ export const highlights = [
     text: "Guided by experienced medical & physiotherapy professionals.",
   },
 ];
+export const events = [
+  {
+    name: "Kayaking Activity",
+    text: "Our students participated in an exciting kayaking activity, encouraging teamwork, confidence, adventure and active participation beyond the classroom.",
+  },
+  {
+    name: "Musical Event",
+    text: "Students showcased their musical talents at the college fest, creating an energetic and memorable celebration filled with music, creativity and enthusiasm.",
+  },
+  {
+    name: "DJ Night with Agam Band",
+    text: "The college fest came alive with an electrifying DJ night featuring Agam Band, along with spectacular fire and foam effects that created an unforgettable evening of music, energy and celebration.",
+  },
+  {
+    name: "Music Band Wins Prize 2025",
+    text: "Our college music band delivered an outstanding performance at the 2025 Intercollegiate Music Competition and secured a prize, earning recognition among colleges across South India.",
+  },
+  {
+    name: "Free Medical Camp for Students",
+    text: "A free medical camp was organised at the college to provide health check-ups and basic medical care for students, promoting health awareness and overall well-being.",
+  },
+  {
+    name: "First-Year Medical Event Winners 2022",
+    text: "Our first-year students delivered an outstanding performance at the 2022 medical event competition, securing the winning prize and bringing pride to the college.",
+  },
+  {
+    name: "Women's Day Special Kayaking 2023",
+    text: "To celebrate International Women’s Day, our students participated in a special kayaking activity in 2023, promoting confidence, teamwork, fitness and an adventurous spirit.",
+  },
+  {
+    name: "Med Fest Aaravam 2024",
+    text: "Med Fest Aaravam 2024 was a vibrant celebration of student talent, creativity and camaraderie, featuring exciting medical, cultural and entertainment events.",
+  },
+  {
+    name: "Music Fest 2025",
+    text: "The 2025 Music Fest brought the campus alive with captivating performances, showcasing the musical talents, creativity and enthusiasm of students in a vibrant celebration of music and culture.",
+  },
+];

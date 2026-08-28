@@ -170,7 +170,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-
                 {/* Open Google Maps button */}
                 <a
                   href={contact.mapLinkHref}

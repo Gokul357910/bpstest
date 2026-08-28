@@ -19,13 +19,13 @@ export default function Navbar() {
       {/* =========================================================
           TOP UTILITY BAR
       ========================================================= */}
-      <div className="bg-[#A8C0E0] text-navy text-[12px]">
+      <div className="bg-navy text-white/80 text-[12px]">
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-2.5 flex items-center justify-between gap-4">
           {/* Contact information */}
           <div className="flex items-center gap-5">
             <a
               href={contact.admissionHotlineHref}
-              className="flex items-center gap-2 hover:opacity-75 transition-opacity duration-300 font-medium"
+              className="flex items-center gap-2 hover:text-amber transition-colors duration-300"
             >
               <PhoneIcon />
               <span className="hidden sm:inline">
@@ -35,7 +35,7 @@ export default function Navbar() {
 
             <a
               href={`mailto:${contact.email}`}
-              className="hidden md:flex items-center gap-2 hover:opacity-75 transition-opacity duration-300 font-medium"
+              className="hidden md:flex items-center gap-2 hover:text-amber transition-colors duration-300"
             >
               <MailIcon />
               <span>{contact.email}</span>
@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
 
           {/* Admission information */}
-          <div className="text-navy font-bold tracking-wide text-[10px] sm:text-[11px] uppercase whitespace-nowrap bg-white/40 border border-white/40 px-3 py-1 rounded-full">
+          <div className="text-amber font-medium tracking-wide text-[10px] sm:text-[11px] uppercase whitespace-nowrap">
             ADMISSION ENQUIRY 2026–27 ·{" "}
             {contact.enquiryNumbers.join(" / ")}
           </div>

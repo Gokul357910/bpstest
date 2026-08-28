@@ -164,16 +164,17 @@ export default function AdmissionsCTA() {
       {/* =========================================================
           CURRENT ADMISSIONS CTA SECTION
       ========================================================= */}
-      <section id="admissions" className="relative overflow-hidden bg-[#A8C0E0]">
+      <section id="admissions" className="relative overflow-hidden bg-navy">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_#115E59_0%,_#0F766E_60%)] opacity-95" />
         <div className="relative max-w-5xl mx-auto px-5 md:px-8 py-20 md:py-24 text-center">
           <Reveal>
-            <span className="font-mono text-[12px] tracking-[0.2em] uppercase text-navy font-semibold">
+            <span className="font-mono text-[12px] tracking-[0.2em] uppercase text-amber font-semibold">
               Admissions Open
             </span>
-            <h2 className="font-display text-[30px] md:text-[42px] font-semibold text-navy mt-4 leading-tight">
+            <h2 className="font-display text-[30px] md:text-[42px] font-semibold text-white mt-4 leading-tight">
               Begin your career in physiotherapy at P.K. Das College.
             </h2>
-            <p className="mt-4 text-navy/80 max-w-xl mx-auto leading-relaxed">
+            <p className="mt-4 text-white/85 max-w-xl mx-auto">
               Speak with our admission team or send in your application
               seats for the new academic year are open.
             </p>
@@ -182,7 +183,7 @@ export default function AdmissionsCTA() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeNZi8r2gbHvLu9wPG5GALbA4HN3PeTT5cK1WyEh1pHMDBeFw/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-navy hover:bg-navy/90 transition rounded-full px-8 py-4 font-semibold text-[15px] text-white shadow-md"
+                className="bg-amber hover:bg-amber-dark transition rounded-full px-8 py-4 font-semibold text-[15px] text-white shadow-[0_14px_30px_-10px_rgba(245,158,11,0.7)]"
               >
                 Apply Now
               </a>
@@ -190,7 +191,7 @@ export default function AdmissionsCTA() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeNZi8r2gbHvLu9wPG5GALbA4HN3PeTT5cK1WyEh1pHMDBeFw/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-navy/30 text-navy hover:bg-navy hover:text-white transition rounded-full px-8 py-4 font-semibold text-[15px]"
+                className="border border-white/60 hover:bg-white/10 transition rounded-full px-8 py-4 font-semibold text-[15px] text-white"
               >
                 Enquire Now
               </a>

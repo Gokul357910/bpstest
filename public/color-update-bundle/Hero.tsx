@@ -164,8 +164,8 @@ export default function Hero() {
             aria-label={`Show hero image ${index + 1}`}
             onClick={() => setCurrentImage(index)}
             className={`h-1.5 rounded-full transition-all duration-500 ${currentImage === index
-              ? "w-8 bg-amber"
-              : "w-1.5 bg-white/60 hover:bg-white/90"
+                ? "w-8 bg-amber"
+                : "w-1.5 bg-white/60 hover:bg-white/90"
               }`}
           />
         ))}

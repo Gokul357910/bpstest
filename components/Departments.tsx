@@ -1,6 +1,29 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
-import { DeptIcon } from "./DeptIcons";
 import { departments } from "@/lib/content";
+
+import departmentone from "../public/AnatomyMuseum.jpg";
+import departmenttwo from "../public/physiologymuseum.jpg";
+import departmentthree from "../public/microbiologylab.jpg";
+import departmentfour from "../public/exercisetherapylab.webp";
+import departmentfive from "../public/massagetherapy.jpg";
+import departmentsix from "../public/electrotherapylab.jpg";
+import departmentseven from "../public/cardiologylab.jpg";
+import departmenteight from "../public/orthopaediclab.jpg";
+import departmentnine from "../public/LaserTherapy.avif";
+
+// Array matching the order of the departments
+const departmentImages = [
+  departmentone,
+  departmenttwo,
+  departmentthree,
+  departmentfour,
+  departmentfive,
+  departmentsix,
+  departmentseven,
+  departmenteight,
+  departmentnine,
+];
 
 export default function Departments() {
   return (
@@ -8,7 +31,7 @@ export default function Departments() {
       <section id="departments" className="bg-white">
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
           <Reveal className="max-w-2xl">
-            <span className="font-mono text-[12px] tracking-[0.2em] uppercase text-green">
+            <span className="font-mono text-[12px] tracking-[0.2em] uppercase text-green font-semibold">
               Departments
             </span>
             <h2 className="font-display text-[30px] md:text-[38px] font-semibold text-navy mt-3">
@@ -25,17 +48,30 @@ export default function Departments() {
               <Reveal
                 key={d.name}
                 delay={(i % 3) * 0.06}
-                className="bg-paper border border-mist rounded-2xl p-7 card-hover"
+                className="bg-paper border border-mist rounded-2xl overflow-hidden card-hover flex flex-col"
               >
-                <div className="w-11 h-11 rounded-xl bg-navy text-green flex items-center justify-center">
-                  <DeptIcon name={d.icon} className="w-5 h-5" />
+                {/* Department Image Container */}
+                <div className="relative w-full h-48 overflow-hidden bg-navy/5">
+                  <Image
+                    src={departmentImages[i] || departmentone}
+                    alt={d.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-                <div className="font-display font-semibold text-navy text-[17px] mt-4">
-                  {d.name}
+
+                {/* Card Text Content */}
+                <div className="p-6 md:p-7 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-display font-semibold text-navy text-[18px]">
+                      {d.name}
+                    </h3>
+                    <p className="text-navy/60 text-[14px] mt-2 leading-relaxed">
+                      {d.text}
+                    </p>
+                  </div>
                 </div>
-                <p className="text-navy/60 text-[14px] mt-2 leading-relaxed">
-                  {d.text}
-                </p>
               </Reveal>
             ))}
           </div>
