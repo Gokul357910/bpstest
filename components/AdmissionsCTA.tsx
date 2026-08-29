@@ -119,10 +119,6 @@ export default function AdmissionsCTA() {
                 <p>
                   The eligibility for studying this course, the candidate has to get <strong>50% pass</strong> in the Higher Secondary Examination with Physics, Chemistry, Biology (or Botany and Zoology) as their main subjects.
                 </p>
-                <div className="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 text-[14px] font-medium flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                  NEET Appearance is mandatory.
-                </div>
               </div>
             </AccordionItem>
 

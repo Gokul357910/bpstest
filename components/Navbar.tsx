@@ -17,20 +17,18 @@ export default function Navbar() {
   return (
     <>
       {/* =========================================================
-          TOP UTILITY BAR
-      ========================================================= */}
+    TOP UTILITY BAR
+========================================================= */}
       <div className="bg-[#A8C0E0] text-navy text-[12px]">
-        <div className="max-w-7xl mx-auto px-5 md:px-8 py-2.5 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-5 md:px-8 py-2 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
           {/* Contact information */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4 sm:gap-5 text-xs">
             <a
               href={contact.admissionHotlineHref}
-              className="flex items-center gap-2 hover:opacity-75 transition-opacity duration-300 font-medium"
+              className="flex items-center gap-1.5 sm:gap-2 hover:opacity-75 transition-opacity duration-300 font-medium whitespace-nowrap"
             >
               <PhoneIcon />
-              <span className="hidden sm:inline">
-                {contact.admissionHotline}
-              </span>
+              <span>{contact.admissionHotline}</span>
             </a>
 
             <a
@@ -43,9 +41,11 @@ export default function Navbar() {
           </div>
 
           {/* Admission information */}
-          <div className="text-navy font-bold tracking-wide text-[10px] sm:text-[11px] uppercase whitespace-nowrap bg-white/40 border border-white/40 px-3 py-1 rounded-full">
+          <div className="text-navy font-bold tracking-wide text-[9px] xs:text-[10px] sm:text-[11px] uppercase text-center bg-white/40 border border-white/40 px-2.5 sm:px-3 py-1 rounded-full max-w-full overflow-hidden text-ellipsis">
             ADMISSION ENQUIRY 2026–27 ·{" "}
-            {contact.enquiryNumbers.join(" / ")}
+            <span className="whitespace-normal sm:whitespace-nowrap">
+              {contact.enquiryNumbers.join(" / ")}
+            </span>
           </div>
         </div>
       </div>
