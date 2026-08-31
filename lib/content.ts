@@ -49,7 +49,7 @@ export const departments: Department[] = [
   {
     name: "Microbiology Lab",
     icon: "microscope",
-    text: "Uses mechanical devices and structured movement approaches to restore normal musculoskeletal function, reduce pain from disease or injury, and promote mobility kept current with modern developments.",
+    text: "Uses mechanical devices and structured movement approaches to restore normal musculoskeletal function, reduce pain from disease or injury and promote mobility kept current with modern developments.",
   },
 
   {
@@ -105,13 +105,13 @@ export const highlights = [
   {
     n: "03",
     title: "Modern Laboratories",
-    text: "Nine dedicated labs covering the full physiotherapy curriculum.",
+    text: "Nine dedicated labs covering the full Physiotherapy curriculum.",
   },
 
   {
     n: "04",
     title: "Experienced Faculty",
-    text: "Guided by experienced medical & physiotherapy professionals.",
+    text: "Guided by experienced medical & Physiotherapy professionals.",
   },
 ];
 export const events = [

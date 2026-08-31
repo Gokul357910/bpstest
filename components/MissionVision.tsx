@@ -24,25 +24,25 @@ const whyChooseUsData = [
     icon: GraduationCap,
     title: "Quality Academic Learning",
     description:
-      "Build a strong foundation in physiotherapy through structured and comprehensive academic education.",
+      "Build a strong foundation in Physiotherapy through structured and comprehensive academic education.",
   },
   {
     icon: Activity,
     title: "Practical Skill Development",
     description:
-      "Gain hands-on learning opportunities to understand and apply physiotherapy techniques effectively.",
+      "Gain hands-on learning opportunities to understand and apply Physiotherapy techniques effectively.",
   },
   {
     icon: Stethoscope,
     title: "Clinical Exposure",
     description:
-      "Get opportunities to understand healthcare settings, patient care, rehabilitation, and professional practices.",
+      "Get opportunities to understand healthcare settings, patient care, rehabilitation and professional practices.",
   },
   {
     icon: Building2,
     title: "Modern Learning Environment",
     description:
-      "Learn in a supportive environment with appropriate facilities and resources for physiotherapy education.",
+      "Learn in a supportive environment with appropriate facilities and resources for Physiotherapy education.",
   },
   {
     icon: Users,
@@ -54,19 +54,19 @@ const whyChooseUsData = [
     icon: UserCheck,
     title: "Student-Focused Education",
     description:
-      "Receive guidance and support to encourage academic growth, confidence, and overall development.",
+      "Receive guidance and support to encourage academic growth, confidence and overall development.",
   },
   {
     icon: HeartHandshake,
     title: "Patient-Centred Approach",
     description:
-      "Develop empathy, communication, and professional values that are essential for responsible healthcare practice.",
+      "Develop empathy, communication and professional values that are essential for responsible healthcare practice.",
   },
   {
     icon: Briefcase,
     title: "Career-Oriented Learning",
     description:
-      "Gain knowledge and skills that can help prepare you for diverse career opportunities in physiotherapy.",
+      "Gain knowledge and skills that can help prepare you for diverse career opportunities in Physiotherapy.",
   },
   {
     icon: Network,
@@ -84,13 +84,13 @@ const whyChooseUsData = [
     icon: Sparkles,
     title: "New-Age Learning Approach",
     description:
-      "As a newly established institution, we aim to create a forward-looking learning environment aligned with the evolving field of physiotherapy.",
+      "As a newly established institution, we aim to create a forward-looking learning environment aligned with the evolving field of Physiotherapy.",
   },
   {
     icon: Smile,
     title: "Supportive Campus Environment",
     description:
-      "Experience a positive academic atmosphere that encourages learning, participation, and personal growth.",
+      "Experience a positive academic atmosphere that encourages learning, participation and personal growth.",
   },
 ];
 
@@ -115,12 +115,12 @@ export default function MissionVision() {
                 Vision
               </span>
               <p className="font-display text-[21px] md:text-[24px] leading-snug mt-4 text-navy">
-                Our vision is to establish PK Das College of Physiotherapy as a
-                centre for quality physiotherapy education and professional
+                Our vision is to establish to maintain P K Das College of Physiotherapy as a
+                centre for quality Physiotherapy education and professional
                 development. We aim to nurture skilled, confident,
-                compassionate, and responsible physiotherapists who can
+                compassionate and responsible Physiotherapists who can
                 contribute positively to healthcare and society. Through quality
-                education, practical learning, and clinical exposure, we
+                education, practical learning and clinical exposure, we
                 aspire to prepare students to meet the changing needs of the
                 healthcare sector.
               </p>
@@ -133,11 +133,11 @@ export default function MissionVision() {
               </span>
               <p className="font-display text-[21px] md:text-[24px] leading-snug mt-4 text-navy">
                 Our mission is to provide students with a strong foundation in
-                physiotherapy through quality academic education, practical
-                training, and clinical learning. We aim to create a supportive
+                Physiotherapy through quality academic education, practical
+                training and clinical learning. We aim to create a supportive
                 learning environment where students can develop professional
                 knowledge, practical skills, communication abilities, critical
-                thinking, empathy, and ethical values. The college is committed
+                thinking, empathy and ethical values. The college is committed
                 to encouraging students to follow evidence-based practices and
                 develop the confidence required to contribute effectively to
                 patient care and rehabilitation.
@@ -234,18 +234,18 @@ export default function MissionVision() {
                     It gives me great pleasure to welcome you to PK Das College of
                     Physiotherapy. The establishment of this institution marks a new step
                     towards providing aspiring healthcare professionals with opportunities
-                    to build meaningful careers in physiotherapy.
+                    to build meaningful careers in Physiotherapy.
                   </p>
                   <p>
-                    At PK Das College of Physiotherapy, we believe that good education
+                    At P K Das College of Physiotherapy, we believe that good education
                     should combine knowledge with practical experience. Our aim is to provide
                     students with a strong academic foundation along with opportunities to
                     develop practical and clinical skills.
                   </p>
                   <p>
                     We also believe in nurturing qualities such as compassion, discipline,
-                    communication, teamwork, and professional responsibility. I wish all
-                    our students a successful and fulfilling journey at PK Das College of
+                    communication, teamwork and professional responsibility. I wish all
+                    our students a successful and fulfilling journey at P K Das College of
                     Physiotherapy.
                   </p>
                 </div>
@@ -295,10 +295,10 @@ export default function MissionVision() {
                     The Nehru Group of Institutions enable our students and professionals to seek quality education and a successful career. All our efforts are aimed to make sure that we show them the right path and give that final push for students and faculty to achieve their true destiny.
                   </p>
                   <p>
-                    Everything in this day and age is interconnected, and education is no exception. We at Nehru Group of Institutions always have focused on equipping our students with vital skill sets so as to compete effectively in today&apos;s global market.
+                    Everything in this day and age is interconnected and education is no exception. We at Nehru Group of Institutions always have focused on equipping our students with vital skill sets so as to compete effectively in today&apos;s global market.
                   </p>
                   <p>
-                    Our support is with you always, and I wish you all the success in every endeavour you take up for the growth and development of the students and faculty of Nehru Group of Institutions.
+                    Our support is with you always and I wish you all the success in every endeavour you take up for the growth and development of the students and faculty of Nehru Group of Institutions.
                   </p>
                 </div>
 

@@ -35,7 +35,7 @@ export default function Departments() {
               Departments
             </span>
             <h2 className="font-display text-[30px] md:text-[38px] font-semibold text-navy mt-3">
-              Nine labs. One clinical mindset.
+              Nine labs. One clinical mindset
             </h2>
             <p className="mt-4 text-navy/65 leading-relaxed">
               Every department is built to translate theory into hands-on,

@@ -111,12 +111,12 @@ export default function Hero() {
             <span className="italic text-amber">
               Palakkad
             </span>{" "}
-            starts with how you&apos;re measured.
+            "Measure, Understand, Restore. The Science of the best Physiotherapy."
           </h1>
 
           {/* Subtitle Description */}
           <p className="mt-6 text-[16px] md:text-[18px] text-white/90 max-w-2xl leading-relaxed">
-            P.K. Das College of Physiotherapy, Vaniyamkulam, offers a
+            P K Das College of Physiotherapy, Vaniyamkulam, offers a
             KUHS affiliated programme built on real clinical exposure
             from musculoskeletal care to sports injury and
             neuro-rehabilitation.

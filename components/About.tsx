@@ -9,12 +9,12 @@ export default function About() {
             Welcome
           </span>
           <h2 className="font-display text-[30px] md:text-[38px] font-semibold text-navy mt-3 leading-tight">
-            P.K. Das College
+            P K Das College
             <br className="hidden md:block" /> of Physiotherapy
           </h2>
           <p className="mt-5 text-navy/70 leading-relaxed">
-            Best Physiotherapy course in Palakkad offering one of the
-            leading physiotherapy education programmes in Ottapalam,
+            The best Physiotherapy course in Palakkad offering one of the
+            leading Physiotherapy education programmes in Ottapalam,
             Vaniyamkulam, with comprehensive knowledge and hands-on training
             across musculoskeletal disorders, sports injuries, neurological
             conditions, rehabilitation and patient care.
@@ -29,7 +29,7 @@ export default function About() {
               Kerala University of Health Sciences (KUHS)
             </strong>
             . We are committed to nurturing highly skilled, compassionate and
-            competent physiotherapy professionals who can contribute
+            competent Physiotherapy professionals who can contribute
             meaningfully to the healthcare sector.
           </p>
           <p>
@@ -43,15 +43,15 @@ export default function About() {
           <p>
             Teaching and training are delivered through lectures, small-group
             tutorials, presentations, practical sessions, laboratory-based
-            learning, peer-group learning, clinical training and independent
+            learning, peer-group learning evaluation, clinical training and independent
             study guided throughout by experienced medical and
-            physiotherapy professionals.
+            Physiotherapy professionals.
           </p>
           <p>
             The focus extends beyond theory to practical skill, clinical
             reasoning, communication, professional ethics and compassionate
-            patient care preparing students to meet the evolving demands of
-            the physiotherapy profession.
+            patient-care preparing students to meet the evolving demands of
+            the Physiotherapy profession.
           </p>
         </Reveal>
       </div>
