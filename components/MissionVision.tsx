@@ -253,13 +253,13 @@ export default function MissionVision() {
                 {/* Signature Block (Left Aligned) */}
                 <div className="mt-8 text-left">
                   <p className="font-semibold text-navy text-[16px]">
-                    Adv. Dr. P Krishnadas
+                    Adv. Dr. P. Krishnadas
                   </p>
                   <p className="text-navy/65 text-[14px]">
                     Chairman &amp; Managing Trustee
                   </p>
                   <p className="text-navy/65 text-[14px]">
-                    PK Das Group of Institutions
+                    Nehru group of institutions
                   </p>
                 </div>
               </div>
@@ -305,13 +305,13 @@ export default function MissionVision() {
                 {/* Signature Block (Right Aligned) */}
                 <div className="mt-8 text-right">
                   <p className="font-semibold text-navy text-[16px]">
-                    Dr.P.Krishnakumar
+                    Dr. P Krishnakumar
                   </p>
                   <p className="text-navy/65 text-[14px]">
                     CEO &amp; Secretary,
                   </p>
                   <p className="text-navy/65 text-[14px]">
-                    Nehru Group of Institution
+                    Nehru group of institutions
                   </p>
                 </div>
               </div>
